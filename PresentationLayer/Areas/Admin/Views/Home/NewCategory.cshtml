@@ -1,0 +1,16 @@
+﻿@model EntityLayer.Entities.Category
+@{
+    ViewData["Title"] = "NewCategory";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1 style="margin-top:10px">New Category</h1>
+<form method="post">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" type="text" class="form-control"/>
+    <input asp-for="Status" type="hidden" value="True"/>
+    <div class="form-group" style="margin-top:10px">
+        <button class="btn btn-success">Add</button>
+    </div>
+</form>
+

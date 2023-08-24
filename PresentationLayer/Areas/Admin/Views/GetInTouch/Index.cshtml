@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Entities
+@model List<GetInTouch>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1 style="margin-top:10px">Index</h1>
+<table class="table table-bordered">
+	<tr>
+		<th>Email</th>
+		<th>Phone</th>
+		<th>Address</th>
+		<th>Change</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+
+		<tr>
+			<td>@item.Email</td>
+			<td>@item.Phone</td>
+			<td>@item.Address</td>
+			<td>
+				<a href="/Admin/GetInTouch/DeleteGetInTouch/@item.Id" class="btn btn-danger">Delete</a>
+				<a href="/Admin/GetInTouch/GetGetInTouch/@item.Id" class="btn btn-success">Update</a>
+			</td>
+		</tr>
+	}
+</table>
+<a href="/Admin/GetInTouch/NewGetInTouch/" class="btn btn-primary">New GetInTouch</a>

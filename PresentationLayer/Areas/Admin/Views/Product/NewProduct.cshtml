@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Entities.Product
+@{
+    ViewData["Title"] = "NewProduct";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1 style="margin-top:10px">NewProduct</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Category"></label>
+        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.categories, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label asp-for="OldPrice"></label>
+        <input asp-for="OldPrice" type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewPrice"></label>
+        <input asp-for="NewPrice" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+    <button class="btn btn-primary">Add New Product</button>
+    </div>
+</form>
+

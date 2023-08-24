@@ -1,0 +1,15 @@
+﻿@model EntityLayer.Entities.About
+@{
+    ViewData["Title"] = "GetAbout";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1 style="margin-top:10px">Get About</h1>
+<form asp-action="UpdateAbout">
+	<input asp-for="Id" type="hidden" />
+	<label asp-for="Description"></label>
+	<input asp-for="Description" type="text" class="form-control" />
+	<div class="form-group" style="margin-top:10px">
+		<button class="btn btn-primary">Update</button>
+	</div>
+</form>

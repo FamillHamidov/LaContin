@@ -1,0 +1,16 @@
+﻿@model EntityLayer.Entities.Category
+@{
+	ViewData["Title"] = "GetCategory";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1 style="margin-top:10px">Category Update</h1>
+<form asp-action="UpdateCategory" method="post">
+	<input asp-for="Id" type="hidden" />
+	<label asp-for="Name"></label>
+	<input asp-for="Name" type="text" class="form-control" />
+	<div class="form-group" style="margin-top:10px">
+		<button class="btn btn-primary">Update</button>
+	</div>
+</form>
+

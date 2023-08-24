@@ -32,6 +32,14 @@
 
   <ItemGroup>
     <None Include="D:\Project\LaContin_Project\PresentationLayer\Views\Shared\Components\.editorconfig" />
+    <None Include="wwwroot\admin\assets\vendor\font-awesome\css\font-awesome.scss" />
+    <None Include="wwwroot\admin\assets\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\admin\assets\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
 
 </Project>

@@ -5,6 +5,134 @@
       "PackagePath": "staticwebassets\\PresentationLayer.bundle.scp.css"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\bundles\\c3.bundle.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\bundles\\c3.bundle.js"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\bundles\\jvectormap.bundle.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\bundles\\jvectormap.bundle.js"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\bundles\\libscripts.bundle.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\bundles\\libscripts.bundle.js"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\bundles\\mainscripts.bundle.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\bundles\\mainscripts.bundle.js"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\bundles\\vendorscripts.bundle.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\bundles\\vendorscripts.bundle.js"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\main.css"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\logo-icon.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\logo-icon.svg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\user.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\user.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar1.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar10.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar10.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar2.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar2.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar3.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar3.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar4.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar4.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar5.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar5.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar6.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar6.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar7.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar7.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar8.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar8.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\xs\\avatar9.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\xs\\avatar9.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\charts-c3\\plugin.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\charts-c3\\plugin.css"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\css\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\css\\font-awesome.scss"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\font-awesome\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\vendor\\jvectormap\\jquery-jvectormap-2.0.3.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\vendor\\jvectormap\\jquery-jvectormap-2.0.3.min.css"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\js\\index8.js",
+      "PackagePath": "staticwebassets\\admin\\js\\index8.js"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\css\\plugins\\animate.css",
       "PackagePath": "staticwebassets\\assets\\css\\plugins\\animate.css"
     },

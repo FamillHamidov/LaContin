@@ -10,5 +10,7 @@ namespace EntityLayer.Entities
 	public class Category:BaseClass
 	{
 		public string Name { get; set; } = null!;
+		public List<Product>? Products { get; set; }
+		public bool Status { get; set; }
     }
 }

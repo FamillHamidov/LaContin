@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Entities
+@model List<Category>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1 style="margin-top:10px">Categories</h1>
+<table class="table table-bordered">
+	<tr>
+		<th>Name</th>
+		<th>Change</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		if (item.Status == true)
+		{
+			<tr>
+				<td>@item.Name</td>
+				<td>
+					<a href="/Admin/Home/DeleteCategory/@item.Id" class="btn btn-danger">Delete</a>
+					<a href="/Admin/Home/GetCategory/@item.Id" class="btn btn-success">Update</a>
+				</td>
+			</tr>
+		}
+	}
+</table>
+<a href="/Admin/Home/NewCategory/" class="btn btn-primary">New Category</a>

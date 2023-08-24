@@ -1,0 +1,31 @@
+﻿@using EntityLayer.Entities
+@model List<Product>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1 style="margin-top:10px">Products</h1>
+<table class="table table-bordered">
+	<tr>
+		<th>Name</th>
+		<th>Category Name</th>
+		<th>Old Price</th>
+		<th>New Price</th>
+		<th>Change</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.Name</td>
+			<td>@item.CategoryId</td>
+			<td>@item.OldPrice</td>
+			<td>@item.NewPrice</td>
+			<td>
+				<a href="/Admin/Product/DeleteProduct/@item.Id" class="btn btn-danger">Delete</a>
+				<a href="/Admin/Product/GetProduct/@item.Id" class="btn btn-success">Update</a>
+			</td>
+		</tr>
+	}
+</table>
+<a href="/Admin/Product/NewProduct" class="btn btn-primary">New Product</a>
