@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\admin\\assets\\images\\logo-icon.svg"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\logo-white.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\images\\logo-white.svg"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\user.png",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\user.png"
     },

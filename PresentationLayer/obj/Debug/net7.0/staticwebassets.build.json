@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iQ3tb4zeQPvznH7L4L+sCxNn+D4XbwWybqEVI7HahrQ=",
+  "Hash": "YthG3STTFSzpbknUZ9QtTsJJj4xBmWjoqrTA5N4+CQw=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\images\\logo-icon.svg"
+    },
+    {
+      "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\logo-white.svg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "admin/assets/images/logo-white.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\images\\logo-white.svg"
     },
     {
       "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\images\\user.png",

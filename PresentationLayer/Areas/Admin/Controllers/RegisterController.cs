@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using EntityLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Areas.Admin.Controllers
@@ -15,9 +16,18 @@ namespace PresentationLayer.Areas.Admin.Controllers
 			_adminService = adminService;
 			_context = context;
 		}
+		[HttpGet]
 		public IActionResult Index()
+
 		{
 			return View();
+		}
+		[HttpPost]
+		public IActionResult Index(Login login)
+		{
+			_adminService.Add(login);
+			_context.SaveChanges();
+			return RedirectToAction("Index");
 		}
 	}
 }
