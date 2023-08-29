@@ -233,6 +233,10 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff2"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\fonts\\table.png",
+      "PackagePath": "staticwebassets\\assets\\fonts\\table.png"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\fonts\\themify.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\themify.eot"
     },
@@ -497,6 +501,18 @@
       "PackagePath": "staticwebassets\\assets\\images\\cart\\cart-3.jpg"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\category\\camp-bag.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\camp-bag.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\category\\camp.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\camp.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\category\\carpet.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\carpet.png"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\category\\category-1.png",
       "PackagePath": "staticwebassets\\assets\\images\\category\\category-1.png"
     },
@@ -599,6 +615,14 @@
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\category\\category-hover-9.png",
       "PackagePath": "staticwebassets\\assets\\images\\category\\category-hover-9.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\category\\chair.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\chair.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\category\\table.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\table.png"
     },
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\favicon.png",
@@ -785,6 +809,18 @@
       "PackagePath": "staticwebassets\\assets\\images\\product-details\\review-1.png"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\product\\IMG_2131.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\product\\IMG_2131.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\product\\IMG_3106.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\product\\IMG_3106.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\product\\IMG_3254.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\product\\IMG_3254.jpg"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\product\\product-1.png",
       "PackagePath": "staticwebassets\\assets\\images\\product\\product-1.png"
     },
@@ -851,6 +887,14 @@
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\product\\single-product.png",
       "PackagePath": "staticwebassets\\assets\\images\\product\\single-product.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\slider\\camp-pc.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\camp-pc.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\slider\\camp-slider.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\camp-slider.jpg"
     },
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\slider\\slider-bg-1.jpg",
