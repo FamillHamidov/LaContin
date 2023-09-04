@@ -1,14 +1,15 @@
 ﻿@model EntityLayer.Dtos.ProductDto
 @{
-    ViewData["Title"] = "NewProduct";
+    ViewData["Title"] = "GetProductDto";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1 style="margin-top:10px">NewProduct</h1>
-<form method="post" enctype="multipart/form-data">
+<h1>GetProductDto</h1>
+<form method="post" asp-action="UpdateProduct">
+    <input asp-for="Id" type="hidden" />
     <div class="form-group">
         <label asp-for="Name"></label>
-        <input asp-for="Name" type="text" class="form-control"/>
+        <input asp-for="Name" type="text" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="CategoryId"></label>
@@ -16,7 +17,7 @@
     </div>
     <div class="form-group">
         <label asp-for="OldPrice"></label>
-        <input asp-for="OldPrice" type="text" class="form-control"/>
+        <input asp-for="OldPrice" type="text" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="NewPrice"></label>
@@ -27,11 +28,12 @@
         <input asp-for="Description" type="text" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Picture"></label>
-        <input asp-for="Picture" type="file" class="form-control" required/>
+        <label asp-for="PictureUrl"></label>
+        <input asp-for="PictureUrl" type="text" class="form-control" />
     </div>
     <div class="form-group">
-    <button class="btn btn-primary">Add New Product</button>
+        <button class="btn btn-primary">Update Product</button>
     </div>
 </form>
+
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GcH8tVhVKuDtiAC8NfsSo8+PTUgZ6pROpUPawaPFNeg=",
+  "Hash": "Ah4Hi3cMaRKHXtTax6CE5FTkBxzNZKIqquId5iGTo+Q=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -6135,6 +6135,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Imagee14e3a1e-1279-40cb-9620-4462b13807f1_slide_2.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "product/Imagee14e3a1e-1279-40cb-9620-4462b13807f1_slide_2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\product\\Imagee14e3a1e-1279-40cb-9620-4462b13807f1_slide_2.jpg"
     }
   ]
 }

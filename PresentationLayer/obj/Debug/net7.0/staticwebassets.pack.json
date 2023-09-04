@@ -1437,6 +1437,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Imagee14e3a1e-1279-40cb-9620-4462b13807f1_slide_2.jpg",
+      "PackagePath": "staticwebassets\\product\\Imagee14e3a1e-1279-40cb-9620-4462b13807f1_slide_2.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PresentationLayer.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
