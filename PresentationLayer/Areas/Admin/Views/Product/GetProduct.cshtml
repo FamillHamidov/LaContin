@@ -1,18 +1,19 @@
-﻿@model EntityLayer.Entities.Product
+﻿@model EntityLayer.Dtos.ProductDto
 @{
     ViewData["Title"] = "GetProduct";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
 <h1 style="margin-top:10px">GetProduct</h1>
-<form method="post" asp-action="UpdateProduct">
+<form method="post" asp-action="UpdateProduct" enctype="multipart/form-data">
     <input asp-for="Id" type="hidden"/>
+    <input asp-for="PictureUrl" type="hidden"/>
     <div class="form-group">
         <label asp-for="Name"></label>
         <input asp-for="Name" type="text" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Category"></label>
+        <label asp-for="CategoryDto"></label>
         @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.categories, new { @class = "form-control" })
     </div>
     <div class="form-group">
@@ -26,6 +27,10 @@
     <div class="form-group">
         <label asp-for="Description"></label>
         <input asp-for="Description" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Picture"></label>
+        <input asp-for="Picture" type="file" class="form-control" />
     </div>
     <div class="form-group">
         <button class="btn btn-primary">Update Product</button>

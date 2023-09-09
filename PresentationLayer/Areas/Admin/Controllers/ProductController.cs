@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Abstract;
+﻿using AutoMapper;
+using BusinessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using EntityLayer.Dtos;
 using EntityLayer.Entities;
@@ -15,13 +16,15 @@ namespace PresentationLayer.Areas.Admin.Controllers
         private readonly ICategoryService _categoryService;
         private readonly Context _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IMapper _mapper;
 
-        public ProductController(IProductService productService, Context context, ICategoryService categoryService, IWebHostEnvironment webHostEnvironment)
+        public ProductController(IProductService productService, Context context, ICategoryService categoryService, IWebHostEnvironment webHostEnvironment, IMapper mapper)
         {
             _productService = productService;
             _context = context;
             _categoryService = categoryService;
             _webHostEnvironment = webHostEnvironment;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
@@ -84,78 +87,55 @@ namespace PresentationLayer.Areas.Admin.Controllers
                                                    Value = x.Id.ToString()
                                                }).ToList();
             ViewBag.categories = categories;
-            return View(product);
+            ProductDto dto = _mapper.Map<ProductDto>(product);
+            return View(dto);
         }
         [HttpPost]
-        public IActionResult UpdateProduct(Product product)
+        public async Task<IActionResult> UpdateProduct(ProductDto dto, Product product)
         {
-
-            _productService.Update(product);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-        [HttpGet]
-        public IActionResult Image(int id)
-        {
-            var product = _productService.GetById(id);
-            
-            var updateProduct=new ProductDto()
-            {
-                Id = product.Id,
-                Name = product.Name,
-                CategoryId = product.CategoryId,
-                Categories=_categoryService.GetAll(),
-                NewPrice = product.NewPrice,
-                OldPrice = product.OldPrice,
-                Description = product.Description,
-            };
-            return View(updateProduct);
-        }
-        [HttpPost]
-        public async Task<IActionResult> UploadImage1(ProductDto dto, Product product)
-        {
-            if (dto.Picture!=null)
+            if (dto.Picture != null)
             {
                 var resource = Directory.GetCurrentDirectory();
                 var extension = Path.GetExtension(dto.Picture.FileName);
                 var imageName = Guid.NewGuid() + extension;
-                var saveLocation = resource + "/wwwroot/productImage/" + imageName;
+                var saveLocation = resource + "/wwwroot/product/Image/" + imageName;
                 var stream = new FileStream(saveLocation, FileMode.Create);
                 await dto.Picture.CopyToAsync(stream);
-                product.PictureUrl = "/productImage/" + imageName;
+                dto.PictureUrl = "/product/Image/" + imageName;
             }
-            product.Name = dto.Name;
-            product.NewPrice = dto.NewPrice;
-            product.OldPrice = dto.OldPrice;
-            product.Description = dto.Description;
-            product.CategoryId = dto.CategoryId;
-            _productService.Update(product);
-            _context.SaveChanges();
-            return View();
-        }
-        [HttpGet]
-        public IActionResult GetProductDto(int id)
-        {
-            var product = _productService.GetById(id);
-            var category = _categoryService.GetAll();
-			List<SelectListItem> categories = (from x in _categoryService.GetAll().Where(x => x.Status == true)
-											   select new SelectListItem
-											   {
-												   Text = x.Name,
-												   Value = x.Id.ToString()
-											   }).ToList();
-			ViewBag.categories = categories;
-            ProductDto dto = new ProductDto
+            else
             {
-                Id = product.Id,
-                Name = product.Name,
-               
-                NewPrice = product.NewPrice,
-                OldPrice = product.OldPrice,
-                Description = product.Description,
-                PictureUrl = product.PictureUrl,
-            };
-            return View(dto);
+                dto.PictureUrl = product.PictureUrl;
+            }
+            var updPrdct = _mapper.Map<Product>(dto);
+            _productService.Update(updPrdct);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
+        //[HttpGet]
+        //public IActionResult Image(int id)
+        //{
+        //    var product = _productService.GetById(id);
+        //    ProductDto dto=_mapper.Map<ProductDto>(product);
+        //    return View(dto);
+        //}
+        //[HttpPost]
+        //public async Task<IActionResult> UploadImage1(ProductDto dto, Product product)
+        //{
+        //    if (dto.Picture!=null)
+        //    {
+        //        var resource = Directory.GetCurrentDirectory();
+        //        var extension = Path.GetExtension(dto.Picture.FileName);
+        //        var imageName = Guid.NewGuid() + extension;
+        //        var saveLocation = resource + "/wwwroot/product/Image/" + imageName;
+        //        var stream = new FileStream(saveLocation, FileMode.Create);
+        //        await dto.Picture.CopyToAsync(stream);
+        //        dto.PictureUrl = "/product/Image/" + imageName;
+        //    }
+        //    var updPrdct = _mapper.Map<Product>(dto);
+        //    _productService.Update(updPrdct);
+        //    _context.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
     }
 }

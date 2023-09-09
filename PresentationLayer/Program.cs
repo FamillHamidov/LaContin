@@ -21,6 +21,7 @@ builder.Services.AddScoped<IGetInTouchService, GetInTouchManager>();
 builder.Services.AddScoped<IGetinTouchDal, EfGetInTouchService>();
 builder.Services.AddScoped<IAdminDal, EfAdminService>();
 builder.Services.AddScoped<IAdminService, AdminManager>();
+builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

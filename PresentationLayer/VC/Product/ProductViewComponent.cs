@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Abstract;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.VC.Product
 {
 	public class ProductViewComponent:ViewComponent
 	{
-		public Task<IViewComponentResult> InvokeAsync()
+		private readonly IProductService _productService;
+
+        public ProductViewComponent(IProductService productService)
+        {
+            _productService = productService;
+        }
+
+        public Task<IViewComponentResult> InvokeAsync()
 		{
-			return Task.FromResult<IViewComponentResult>(View());
+			var product = _productService.GetAll();
+			return Task.FromResult<IViewComponentResult>(View(product));
 		}
 	}
 }

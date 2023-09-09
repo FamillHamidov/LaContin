@@ -15,8 +15,9 @@ namespace EntityLayer.Dtos
         public decimal NewPrice { get; set; }
         public decimal OldPrice { get; set; }
         public string? Description { get; set; }
+        public CategoryDto? CategoryDto{ get; set; }
         public int CategoryId { get; set; }
-        public  List<Category>? Categories { get; set; }
+        //public  List<Category>? Categories { get; set; }
         public string? PictureUrl { get; set; }
         public IFormFile? Picture { get; set; }
     }
