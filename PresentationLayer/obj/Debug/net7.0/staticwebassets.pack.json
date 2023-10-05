@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\PresentationLayer.bundle.scp.css"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\about\\Image\\1a6fb2ae-da89-439a-ad33-1720750f0001_slide_2.jpg",
+      "PackagePath": "staticwebassets\\about\\Image\\1a6fb2ae-da89-439a-ad33-1720750f0001_slide_2.jpg"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\bundles\\c3.bundle.js",
       "PackagePath": "staticwebassets\\admin\\assets\\bundles\\c3.bundle.js"
     },
@@ -1515,6 +1519,14 @@
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\edbfe328-4a8d-449c-8263-64e770f4b1c3.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\edbfe328-4a8d-449c-8263-64e770f4b1c3.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\title\\Image\\08095f1d-aeaf-4908-9d13-5a8de0a663c6_slide_2.jpg",
+      "PackagePath": "staticwebassets\\title\\Image\\08095f1d-aeaf-4908-9d13-5a8de0a663c6_slide_2.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\title\\Image\\28fa3dec-2f1d-4893-b8db-4df215fa7902_slide_1.jpg",
+      "PackagePath": "staticwebassets\\title\\Image\\28fa3dec-2f1d-4893-b8db-4df215fa7902_slide_1.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PresentationLayer.Microsoft.AspNetCore.StaticWebAssets.props",

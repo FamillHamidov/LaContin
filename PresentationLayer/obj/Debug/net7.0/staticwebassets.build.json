@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dY8Xx6btFOB5ufuQHR3CrfkLpkJuQEGYo5/PQVWAajU=",
+  "Hash": "pheZZUIy60qi7Qy/9BCdO/S6fM916tTNVxJJMTjZa18=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Project\\LaContin_Project\\PresentationLayer\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PresentationLayer.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\about\\Image\\1a6fb2ae-da89-439a-ad33-1720750f0001_slide_2.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "about/Image/1a6fb2ae-da89-439a-ad33-1720750f0001_slide_2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\about\\Image\\1a6fb2ae-da89-439a-ad33-1720750f0001_slide_2.jpg"
     },
     {
       "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\bundles\\c3.bundle.js",
@@ -6475,6 +6492,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\product\\Image\\edbfe328-4a8d-449c-8263-64e770f4b1c3.jpg"
+    },
+    {
+      "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\title\\Image\\08095f1d-aeaf-4908-9d13-5a8de0a663c6_slide_2.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "title/Image/08095f1d-aeaf-4908-9d13-5a8de0a663c6_slide_2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\title\\Image\\08095f1d-aeaf-4908-9d13-5a8de0a663c6_slide_2.jpg"
+    },
+    {
+      "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\title\\Image\\28fa3dec-2f1d-4893-b8db-4df215fa7902_slide_1.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "title/Image/28fa3dec-2f1d-4893-b8db-4df215fa7902_slide_1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\title\\Image\\28fa3dec-2f1d-4893-b8db-4df215fa7902_slide_1.jpg"
     }
   ]
 }

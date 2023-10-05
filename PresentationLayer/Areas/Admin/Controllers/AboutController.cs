@@ -1,6 +1,10 @@
-﻿using BusinessLayer.Abstract;
+﻿using AutoMapper;
+using BusinessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using EntityLayer.Dtos;
 using EntityLayer.Entities;
+using Humanizer;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Areas.Admin.Controllers
@@ -10,11 +14,15 @@ namespace PresentationLayer.Areas.Admin.Controllers
     {
         private readonly IAboutService _aboutService;
         private readonly Context _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IMapper _mapper;
 
-        public AboutController(IAboutService aboutService, Context context)
+        public AboutController(IAboutService aboutService, Context context, IWebHostEnvironment webHostEnvironment, IMapper mapper)
         {
             _aboutService = aboutService;
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
@@ -28,9 +36,23 @@ namespace PresentationLayer.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult NewAbout(About about)
+        public async Task<IActionResult> NewAbout(AboutDto dto)
         {
-            _aboutService.Add(about);
+			if (dto.Picture != null)
+			{
+				string folder = "about/Image/";
+				folder += Guid.NewGuid().ToString() + "_" + dto.Picture.FileName;
+				dto.PictureUrl = "/" + folder;
+				string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+				await dto.Picture.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+			}
+            var about = new About()
+            {
+                Title=dto.Title,
+                Description=dto.Description,
+                ImageUrl=dto.PictureUrl
+            };
+			_aboutService.Add(about);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -44,11 +66,25 @@ namespace PresentationLayer.Areas.Admin.Controllers
         public IActionResult GetAbout(int id)
         {
             var about = _aboutService.GetById(id);
-            return View(about);
+            AboutDto dto=_mapper.Map<AboutDto>(about);
+            return View(dto);
         }
-        public IActionResult UpdateAbout(About about)
+        public async Task<IActionResult> UpdateAbout(About about, AboutDto dto)
         {
-            _aboutService.Update(about);
+            if (dto.Picture != null)
+            {
+                string folder = "about/Image/";
+                folder += Guid.NewGuid().ToString() + "_" + dto.Picture.FileName;
+                dto.PictureUrl = "/" + folder;
+                string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+                await dto.Picture.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+            }
+            else
+            {
+                dto.PictureUrl = about.ImageUrl;
+            }
+            var updAbout = _mapper.Map<About>(dto);
+            _aboutService.Update(updAbout);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DataAccessLayer.Concrete;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.VC.TitleSlider
 {
 	public class TitleSliderViewComponent:ViewComponent
 	{
-		public Task<IViewComponentResult> InvokeAsync()
+		private readonly Context _context;
+
+        public TitleSliderViewComponent(Context context)
+        {
+            _context = context;
+        }
+
+        public Task<IViewComponentResult> InvokeAsync()
 		{
-			return Task.FromResult<IViewComponentResult>(View());
+			var images=_context.TitleSliders.ToList();
+			return Task.FromResult<IViewComponentResult>(View(images));
 		}
 	}
 }
