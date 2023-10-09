@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Entities.Testimonial
+@{
+    ViewData["Title"] = "GetTesttimonial";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<h1 style="margin-top:10px">GetGetInTouch</h1>
+<form asp-action="UpdateGetInTouch" method="post">
+	<input asp-for="Id" type="hidden" />
+	<div>
+		<label asp-for="Name"></label>
+		<input asp-for="Name" type="text" class="form-control" />
+	</div>
+	<div>
+		<label asp-for="Title"></label>
+		<input asp-for="Title" type="text" class="form-control" />
+	</div>
+	<div>
+		<label asp-for="Description"></label>
+		<input asp-for="Description" type="text" class="form-control" />
+	</div>
+	<div class="form-group" style="margin-top:10px">
+		<button class="btn btn-primary">Update</button>
+	</div>
+</form>
+

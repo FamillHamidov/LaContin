@@ -1,0 +1,15 @@
+﻿@using EntityLayer.Entities
+@model List<Category>
+@{
+    Layout = null;
+}
+
+<li>
+    <a href="#">Kateqoriyalar</a>
+    <ul class="sub-menu-style">
+        @foreach (var item in Model)
+        {
+            <li><a href="@item.Id">@item.Name </a></li>
+        }
+    </ul>
+</li>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pheZZUIy60qi7Qy/9BCdO/S6fM916tTNVxJJMTjZa18=",
+  "Hash": "MhmbNanvhDmsh4PqvPQzMW56XbXglMiUJyg/sPRqGKA=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -4216,6 +4216,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\testimonial\\client-2.png"
     },
     {
+      "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\testimonial\\user-profile.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "assets/images/testimonial/user-profile.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\testimonial\\user-profile.jpg"
+    },
+    {
+      "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\testimonial\\user-profile2.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "assets/images/testimonial/user-profile2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\testimonial\\user-profile2.jpg"
+    },
+    {
       "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\js\\main.js",
       "SourceId": "PresentationLayer",
       "SourceType": "Discovered",
@@ -6526,6 +6560,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\title\\Image\\28fa3dec-2f1d-4893-b8db-4df215fa7902_slide_1.jpg"
+    },
+    {
+      "Identity": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\title\\Image\\96774931-cb11-448e-a1a2-e54ff3206d0c_camp-pc.jpg",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "title/Image/96774931-cb11-448e-a1a2-e54ff3206d0c_camp-pc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\title\\Image\\96774931-cb11-448e-a1a2-e54ff3206d0c_camp-pc.jpg"
     }
   ]
 }

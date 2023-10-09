@@ -985,6 +985,14 @@
       "PackagePath": "staticwebassets\\assets\\images\\testimonial\\client-2.png"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\testimonial\\user-profile.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonial\\user-profile.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\images\\testimonial\\user-profile2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonial\\user-profile2.jpg"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
     },
@@ -1527,6 +1535,10 @@
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\title\\Image\\28fa3dec-2f1d-4893-b8db-4df215fa7902_slide_1.jpg",
       "PackagePath": "staticwebassets\\title\\Image\\28fa3dec-2f1d-4893-b8db-4df215fa7902_slide_1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\title\\Image\\96774931-cb11-448e-a1a2-e54ff3206d0c_camp-pc.jpg",
+      "PackagePath": "staticwebassets\\title\\Image\\96774931-cb11-448e-a1a2-e54ff3206d0c_camp-pc.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PresentationLayer.Microsoft.AspNetCore.StaticWebAssets.props",

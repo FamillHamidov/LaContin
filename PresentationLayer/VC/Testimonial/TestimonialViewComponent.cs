@@ -1,12 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Abstract;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.VC.Testimonial
 {
     public class TestimonialViewComponent:ViewComponent
     {
-        public Task<IViewComponentResult> InvokeAsync()
+        private readonly ITestimonialService _testimonialService;
+
+		public TestimonialViewComponent(ITestimonialService testimonialService)
+		{
+			_testimonialService = testimonialService;
+		}
+		public Task<IViewComponentResult> InvokeAsync()
         {
-            return Task.FromResult<IViewComponentResult>(View());
+            var testimonial = _testimonialService.GetAll();
+            return Task.FromResult<IViewComponentResult>(View(testimonial));
         }
     }
 }
