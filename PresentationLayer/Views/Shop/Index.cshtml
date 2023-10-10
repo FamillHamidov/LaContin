@@ -1,0 +1,238 @@
+﻿@using EntityLayer.Entities
+@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="zxx">
+<body>
+    <div class="main-wrapper main-wrapper-2">
+        <div class="breadcrumb-area bg-gray-4 breadcrumb-padding-1">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <h2 data-aos="fade-up" data-aos-delay="200">Shop</h2>
+                    <ul data-aos="fade-up" data-aos-delay="400">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="ti-angle-right"></i></li>
+                        <li>Shop Standard </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="breadcrumb-img-1" data-aos="fade-right" data-aos-delay="200">
+                <img src="assets/images/banner/breadcrumb-1.png" alt="">
+            </div>
+            <div class="breadcrumb-img-2" data-aos="fade-left" data-aos-delay="200">
+                <img src="assets/images/banner/breadcrumb-2.png" alt="">
+            </div>
+        </div>
+        <div class="shop-area pt-100 pb-100">
+            <div class="container">
+                <div class="row flex-row-reverse">
+                    <div class="col-12">
+                        <div class="shop-topbar-wrapper mb-40">
+                            <div class="shop-topbar-left">
+                                <div class="showing-item">
+                                    <span>Showing 1–12 of 60 results</span>
+                                </div>
+                            </div>
+                            <div class="shop-topbar-right">
+                                <div class="shop-sorting-area">
+                                    <select class="nice-select nice-select-style-1">
+                                        <option>Default Sorting</option>
+                                        <option>Sort by popularity</option>
+                                        <option>Sort by average rating</option>
+                                        <option>Sort by latest</option>
+                                    </select>
+                                </div>
+                                <div class="shop-view-mode nav">
+                                    <a class="active" href="#shop-1" data-bs-toggle="tab"><i class=" ti-layout-grid3 "></i> </a>
+                                    <a href="#shop-2" data-bs-toggle="tab" class=""><i class=" ti-view-list-alt "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop-bottom-area">
+                            <div class="tab-content jump">
+                                <div id="shop-1" class="tab-pane active">
+                                    <div class="row">
+                                        @foreach(var item in Model)
+                                        {
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                            <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="200">
+                                                <div class="product-img img-zoom mb-25">
+                                                    <a href="/Shop/ShopDetail/@item.Id">
+                                                        <img src="@item.PictureUrl" alt="">
+                                                    </a>
+                                                    <div class="product-badge badge-top badge-right badge-pink">
+                                                        <span>-10%</span>
+                                                    </div>
+                                                    <div class="product-action-wrap">
+                                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
+                                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            <i class="pe-7s-look"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="product-action-2-wrap">
+                                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h3><a href="/Shop/ShopDetail/@item.Id">@item.Name</a></h3>
+                                                    <div class="product-price">
+                                                        <span class="old-price">@item.OldPrice </span>
+                                                        <span class="new-price">@item.NewPrice </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        }    
+                                    </div>
+                                    <div class="pagination-style-1" data-aos="fade-up" data-aos-delay="200">
+                                        <ul>
+                                            <li><a class="active" href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a class="next" href="#"><i class=" ti-angle-double-right "></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu start -->
+        <div class="off-canvas-active">
+            <a class="off-canvas-close"><i class=" ti-close "></i></a>
+            <div class="off-canvas-wrap">
+                <div class="welcome-text off-canvas-margin-padding">
+                    <p>Default Welcome Msg! </p>
+                </div>
+                <div class="mobile-menu-wrap off-canvas-margin-padding-2">
+                    <div id="mobile-menu" class="slinky-mobile-menu text-left">
+                        <ul>
+                            <li>
+                                <a href="#">HOME</a>
+                                <ul>
+                                    <li><a href="index.html">Home version 1 </a></li>
+                                    <li><a href="index-2.html">Home version 2</a></li>
+                                    <li><a href="index-3.html">Home version 3</a></li>
+                                    <li><a href="index-4.html">Home version 4</a></li>
+                                    <li><a href="index-5.html">Home version 5</a></li>
+                                    <li><a href="index-6.html">Home version 6</a></li>
+                                    <li><a href="index-7.html">Home version 7</a></li>
+                                    <li><a href="index-8.html">Home version 8</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">SHOP</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Shop Layout</a>
+                                        <ul>
+                                            <li><a href="shop.html">Standard Style</a></li>
+                                            <li><a href="shop-sidebar.html">Shop Grid Sidebar</a></li>
+                                            <li><a href="shop-list.html">Shop List Style</a></li>
+                                            <li><a href="shop-list-sidebar.html">Shop List Sidebar</a></li>
+                                            <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                            <li><a href="shop-location.html">Store Location</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Product Layout</a>
+                                        <ul>
+                                            <li><a href="product-details.html">Tab Style 1</a></li>
+                                            <li><a href="product-details-2.html">Tab Style 2</a></li>
+                                            <li><a href="product-details-gallery.html">Gallery style </a></li>
+                                            <li><a href="product-details-affiliate.html">Affiliate style</a></li>
+                                            <li><a href="product-details-group.html">Group Style</a></li>
+                                            <li><a href="product-details-fixed-img.html">Fixed Image Style </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">PAGES </a>
+                                <ul>
+                                    <li><a href="about-us.html">About Us </a></li>
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout </a></li>
+                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="wishlist.html">Wishlist </a></li>
+                                    <li><a href="compare.html">Compare </a></li>
+                                    <li><a href="contact-us.html">Contact us </a></li>
+                                    <li><a href="login-register.html">Login / Register </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">BLOG </a>
+                                <ul>
+                                    <li><a href="blog.html">Blog Standard </a></li>
+                                    <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-us.html">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="language-currency-wrap language-currency-wrap-modify">
+                    <div class="currency-wrap border-style">
+                        <a class="currency-active" href="#">$ Dollar (US) <i class=" ti-angle-down "></i></a>
+                        <div class="currency-dropdown">
+                            <ul>
+                                <li><a href="#">Taka (BDT) </a></li>
+                                <li><a href="#">Riyal (SAR) </a></li>
+                                <li><a href="#">Rupee (INR) </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="language-wrap">
+                        <a class="language-active" href="#"><img src="assets/images/icon-img/flag.png" alt=""> English <i class=" ti-angle-down "></i></a>
+                        <div class="language-dropdown">
+                            <ul>
+                                <li><a href="#"><img src="assets/images/icon-img/flag.png" alt="">English </a></li>
+                                <li><a href="#"><img src="assets/images/icon-img/spanish.png" alt="">Spanish</a></li>
+                                <li><a href="#"><img src="assets/images/icon-img/arabic.png" alt="">Arabic </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- All JS is here -->
+    <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/wow.js"></script>
+    <script src="assets/js/plugins/scrollup.js"></script>
+    <script src="assets/js/plugins/aos.js"></script>
+    <script src="assets/js/plugins/magnific-popup.js"></script>
+    <script src="assets/js/plugins/jquery.syotimer.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+    <script src="assets/js/plugins/jquery-ui.js"></script>
+    <script src="assets/js/plugins/jquery-ui-touch-punch.js"></script>
+    <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="assets/js/plugins/waypoints.min.js"></script>
+    <script src="assets/js/plugins/jquery.counterup.js"></script>
+    <script src="assets/js/plugins/select2.min.js"></script>
+    <script src="assets/js/plugins/easyzoom.js"></script>
+    <script src="assets/js/plugins/slinky.min.js"></script>
+    <script src="assets/js/plugins/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+

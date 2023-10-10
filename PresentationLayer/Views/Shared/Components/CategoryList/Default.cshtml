@@ -9,7 +9,10 @@
     <ul class="sub-menu-style">
         @foreach (var item in Model)
         {
-            <li><a href="@item.Id">@item.Name </a></li>
+            if (item.Status==true)
+            {
+                <li><a href="/Shop/Index/@item.Id">@item.Name </a></li>
+            }
         }
     </ul>
 </li>
