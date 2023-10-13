@@ -1,0 +1,12 @@
+﻿@using EntityLayer.Entities
+@model List<Logo>
+@{
+	Layout = null;
+}
+@foreach (var item in Model)
+{
+	<div class="logo">
+	<a href="/Home/Index/"><img src="@item.ImageUrl" alt="logo"></a>
+</div>
+}
+

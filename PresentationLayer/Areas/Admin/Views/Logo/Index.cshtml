@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Entities
+@model List<Logo>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Images</th>
+        <th>Images</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.ImageUrl</td>
+            <td>
+                <img src="@item.ImageUrl" style="height:100px; width:100px" />
+            </td>
+            <td>
+                <a href="/Admin/Logo/GetLogo/@item.Id" class="btn btn-danger">Update</a>
+            </td>
+        </tr>
+    }
+</table>
+

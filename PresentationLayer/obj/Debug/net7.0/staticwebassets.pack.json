@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\about\\Image\\1a6fb2ae-da89-439a-ad33-1720750f0001_slide_2.jpg"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\about\\Image\\fbc8869f-4b66-4151-9190-d042e26ecaba_camp-pc.jpg",
+      "PackagePath": "staticwebassets\\about\\Image\\fbc8869f-4b66-4151-9190-d042e26ecaba_camp-pc.jpg"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\admin\\assets\\bundles\\c3.bundle.js",
       "PackagePath": "staticwebassets\\admin\\assets\\bundles\\c3.bundle.js"
     },
@@ -1449,6 +1453,38 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\logo\\Image\\0df8d5c7-a3c8-4efd-a97b-aa361067ca82_logo.png",
+      "PackagePath": "staticwebassets\\logo\\Image\\0df8d5c7-a3c8-4efd-a97b-aa361067ca82_logo.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\logo\\Image\\15c2b1b4-64a4-413e-9dc6-f7a959e78f4b.png",
+      "PackagePath": "staticwebassets\\logo\\Image\\15c2b1b4-64a4-413e-9dc6-f7a959e78f4b.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\logo\\Image\\4114338e-88e6-4319-a7ab-c63850b6d0d8_logo.png",
+      "PackagePath": "staticwebassets\\logo\\Image\\4114338e-88e6-4319-a7ab-c63850b6d0d8_logo.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\logo\\Image\\4d9b9984-0798-478c-b35e-72e3b410d89e_logo.png",
+      "PackagePath": "staticwebassets\\logo\\Image\\4d9b9984-0798-478c-b35e-72e3b410d89e_logo.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\logo\\Image\\761f00d5-f2eb-43a5-82da-8d0c40d85586_logo.png",
+      "PackagePath": "staticwebassets\\logo\\Image\\761f00d5-f2eb-43a5-82da-8d0c40d85586_logo.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\logo\\Image\\7af7d42e-4cda-45f3-b832-4c4aa4c16396_logo.png",
+      "PackagePath": "staticwebassets\\logo\\Image\\7af7d42e-4cda-45f3-b832-4c4aa4c16396_logo.png"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\logo\\Image\\8926d10f-0230-482b-91b4-3a36b9196dd1_logo.jpg",
+      "PackagePath": "staticwebassets\\logo\\Image\\8926d10f-0230-482b-91b4-3a36b9196dd1_logo.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\logo\\Image\\dcabde79-22b5-4ed0-b3d3-bc334a47590e.jpg",
+      "PackagePath": "staticwebassets\\logo\\Image\\dcabde79-22b5-4ed0-b3d3-bc334a47590e.jpg"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\10c9c11f-1a55-4222-8f96-065d8206cd1d.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\10c9c11f-1a55-4222-8f96-065d8206cd1d.jpg"
     },
@@ -1459,6 +1495,10 @@
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\120a53a2-887e-4efd-8de4-f8f331e42909.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\120a53a2-887e-4efd-8de4-f8f331e42909.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\1f1248a8-6196-4179-b33e-552d468ee99a.jpg",
+      "PackagePath": "staticwebassets\\product\\Image\\1f1248a8-6196-4179-b33e-552d468ee99a.jpg"
     },
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\23aa81e8-2216-487b-96df-63cc351da4f2_singup-img.jpg",
@@ -1481,6 +1521,10 @@
       "PackagePath": "staticwebassets\\product\\Image\\876279f2-0536-4b7d-8de7-5fef0b2781fd.jpg"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\95c743f1-7844-4ba8-bdc3-565aae05af58.jpg",
+      "PackagePath": "staticwebassets\\product\\Image\\95c743f1-7844-4ba8-bdc3-565aae05af58.jpg"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\9da8cf8a-b4ab-4f52-81ac-0d540a1dce9b_IMG_3254.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\9da8cf8a-b4ab-4f52-81ac-0d540a1dce9b_IMG_3254.jpg"
     },
@@ -1491,6 +1535,10 @@
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\af3e6f22-5c15-43e6-a20c-8d6c9217e15b.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\af3e6f22-5c15-43e6-a20c-8d6c9217e15b.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\b685f11d-4ee9-44cc-9988-7c451bc67481.png",
+      "PackagePath": "staticwebassets\\product\\Image\\b685f11d-4ee9-44cc-9988-7c451bc67481.png"
     },
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\c58a2701-bb38-47c4-89c8-320042e5a742.jpg",

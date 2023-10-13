@@ -113,6 +113,22 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Logins");
                 });
 
+            modelBuilder.Entity("EntityLayer.Entities.Logo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Logos");
+                });
+
             modelBuilder.Entity("EntityLayer.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
