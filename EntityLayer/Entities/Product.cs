@@ -17,5 +17,7 @@ namespace EntityLayer.Entities
         public int CategoryId { get; set; }
         public virtual Category? Category { get; set; }
         public string? PictureUrl{ get; set; }
+        public string? PictureUrl1{ get; set; }
+        public string? PictureUrl2{ get; set; }
     }
 }

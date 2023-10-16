@@ -71,7 +71,11 @@ namespace PresentationLayer.Areas.Admin.Controllers
             {
                 dto.PictureUrl = logo.ImageUrl;
             }
-            var updLogo = _mapper.Map<Logo>(dto);
+            var updLogo = new Logo()
+            {
+                Id=dto.Id,
+                ImageUrl = dto.PictureUrl
+            };
             _context.Logos.Update(updLogo);
             _context.SaveChanges();
             return RedirectToAction("Index");

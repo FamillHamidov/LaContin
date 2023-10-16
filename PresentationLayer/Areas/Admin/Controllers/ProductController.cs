@@ -56,6 +56,22 @@ namespace PresentationLayer.Areas.Admin.Controllers
                 string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
                 await dto.Picture.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
             }
+            if (dto.Picture1 != null)
+            {
+                string folder = "product/Image/";
+                folder += Guid.NewGuid().ToString() + "_" + dto.Picture1.FileName;
+                dto.PictureUrl1 = "/" + folder;
+                string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+                await dto.Picture1.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+            }
+            if (dto.Picture2 != null)
+            {
+                string folder = "product/Image/";
+                folder += Guid.NewGuid().ToString() + "_" + dto.Picture2.FileName;
+                dto.PictureUrl2 = "/" + folder;
+                string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+                await dto.Picture2.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+            }
             var newProduct = new Product()
             {
                 Name = dto.Name,
@@ -63,7 +79,9 @@ namespace PresentationLayer.Areas.Admin.Controllers
                 NewPrice = dto.NewPrice,
                 OldPrice = dto.OldPrice,
                 Description = dto.Description,
-                PictureUrl=dto.PictureUrl
+                PictureUrl=dto.PictureUrl,
+                PictureUrl1=dto.PictureUrl1,
+                PictureUrl2=dto.PictureUrl2
             };
             _productService.Add(newProduct);
             _context.SaveChanges();
@@ -107,6 +125,35 @@ namespace PresentationLayer.Areas.Admin.Controllers
             {
                 dto.PictureUrl = product.PictureUrl;
             }
+            if (dto.Picture1 != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(dto.Picture1.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/product/Image/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await dto.Picture1.CopyToAsync(stream);
+                dto.PictureUrl1 = "/product/Image/" + imageName;
+            }
+            else
+            {
+                dto.PictureUrl1 = product.PictureUrl1;
+            }
+            if (dto.Picture2 != null)
+            {
+                var resource = Directory.GetCurrentDirectory();
+                var extension = Path.GetExtension(dto.Picture2.FileName);
+                var imageName = Guid.NewGuid() + extension;
+                var saveLocation = resource + "/wwwroot/product/Image/" + imageName;
+                var stream = new FileStream(saveLocation, FileMode.Create);
+                await dto.Picture2.CopyToAsync(stream);
+                dto.PictureUrl2 = "/product/Image/" + imageName;
+            }
+            else
+            {
+                dto.PictureUrl2 = product.PictureUrl2;
+            }
+
             var updPrdct = _mapper.Map<Product>(dto);
             _productService.Update(updPrdct);
             _context.SaveChanges();

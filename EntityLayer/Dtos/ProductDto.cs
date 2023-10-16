@@ -19,6 +19,10 @@ namespace EntityLayer.Dtos
         public int CategoryId { get; set; }
         //public  List<Category>? Categories { get; set; }
         public string? PictureUrl { get; set; }
+        public string? PictureUrl1 { get; set; }
+        public string? PictureUrl2 { get; set; }
         public IFormFile? Picture { get; set; }
+        public IFormFile? Picture1 { get; set; }
+        public IFormFile? Picture2 { get; set; }
     }
 }

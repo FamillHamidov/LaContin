@@ -83,7 +83,13 @@ namespace PresentationLayer.Areas.Admin.Controllers
             {
                 dto.PictureUrl = about.ImageUrl;
             }
-            var updAbout = _mapper.Map<About>(dto);
+            var updAbout = new About()
+            {
+                Id = dto.Id,
+                Title = dto.Title,
+                Description = dto.Description,
+                ImageUrl = dto.PictureUrl
+            };
             _aboutService.Update(updAbout);
             _context.SaveChanges();
             return RedirectToAction("Index");
