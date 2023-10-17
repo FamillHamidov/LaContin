@@ -1,0 +1,24 @@
+﻿@using EntityLayer.Entities
+@model List<Contact>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<table class="table table-bordered">
+	<tr>
+		<th>Başlıq</th>
+		<th>Əməliyyatlar</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.Title</td>
+			<td>
+				<a href="/Admin/Contact/DeleteContact/@item.Id" class="btn btn-danger">Sil</a>
+				<a href="/Admin/Contact/GetContact/@item.Id" class="btn btn-success">Güncəllə</a>
+			</td>
+		</tr>
+	}
+</table>
+<a href="/Admin/Contact/AddContact/" class="btn btn-primary">Yeni əlaqə növü əlavə et</a>
+

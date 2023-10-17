@@ -23,6 +23,8 @@ builder.Services.AddScoped<IAdminDal, EfAdminService>();
 builder.Services.AddScoped<IAdminService, AdminManager>();
 builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 builder.Services.AddScoped<ITestimonialDal, EfTestimonialService>();
+builder.Services.AddScoped<IContactService, ContactManager>();
+builder.Services.AddScoped<IContactDal, EfContactService>();
 builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 // Configure the HTTP request pipeline.

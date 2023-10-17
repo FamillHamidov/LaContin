@@ -30,32 +30,6 @@ namespace PresentationLayer.Areas.Admin.Controllers
             var about = _aboutService.GetAll();
             return View(about);
         }
-        [HttpGet]
-        public IActionResult NewAbout()
-        {
-            return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> NewAbout(AboutDto dto)
-        {
-			if (dto.Picture != null)
-			{
-				string folder = "about/Image/";
-				folder += Guid.NewGuid().ToString() + "_" + dto.Picture.FileName;
-				dto.PictureUrl = "/" + folder;
-				string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
-				await dto.Picture.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
-			}
-            var about = new About()
-            {
-                Title=dto.Title,
-                Description=dto.Description,
-                ImageUrl=dto.PictureUrl
-            };
-			_aboutService.Add(about);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
         public IActionResult DeleteAbout(int id)
         {
             var about = _aboutService.GetById(id);

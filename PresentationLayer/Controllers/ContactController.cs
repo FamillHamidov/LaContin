@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Abstract;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Controllers
 {
     public class ContactController : Controller
     {
-        public IActionResult Index()
+        private readonly IContactService _contactService;
+
+		public ContactController(IContactService contactService)
+		{
+			_contactService = contactService;
+		}
+
+		public IActionResult Index()
         {
-            return View();
+            var contactInfo = _contactService.GetAll();
+            return View(contactInfo);
         }
     }
 }
