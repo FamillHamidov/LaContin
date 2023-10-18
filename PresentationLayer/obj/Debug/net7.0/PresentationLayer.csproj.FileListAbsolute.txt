@@ -259,3 +259,7 @@ D:\Project\LaContin_Project\PresentationLayer\bin\Debug\net7.0\runtimes\win\lib\
 D:\Project\LaContin_Project\PresentationLayer\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Project\LaContin_Project\PresentationLayer\bin\Debug\net7.0\AutoMapper.dll
 D:\Project\LaContin_Project\PresentationLayer\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Project\LaContin_Project\PresentationLayer\bin\Debug\net7.0\FluentValidation.dll
+D:\Project\LaContin_Project\PresentationLayer\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+D:\Project\LaContin_Project\PresentationLayer\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Project\LaContin_Project\PresentationLayer\obj\Debug\net7.0\PresentationLayer.MvcApplicationPartsAssemblyInfo.cs

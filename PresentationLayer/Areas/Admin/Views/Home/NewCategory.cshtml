@@ -4,13 +4,18 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1 style="margin-top:10px">New Category</h1>
+<h1 style="margin-top:10px">Yeni kateqoriya</h1>
 <form method="post">
-    <label asp-for="Name"></label>
-    <input asp-for="Name" type="text" class="form-control"/>
+	<div class="form-group" asp-validation-summary="All">
+		<label class="col-md-2 control-label">Ad</label>
+		<div class="col-md-10">
+			<input asp-for="Name" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+	</div>
     <input asp-for="Status" type="hidden" value="True"/>
     <div class="form-group" style="margin-top:10px">
-        <button class="btn btn-success">Add</button>
+        <button class="btn btn-success">Əlavə et</button>
     </div>
 </form>
 

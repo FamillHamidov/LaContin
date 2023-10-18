@@ -5,11 +5,11 @@
 	Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1 style="margin-top:10px">Categories</h1>
+<h1 style="margin-top:10px">Kateqoriyalar</h1>
 <table class="table table-bordered">
 	<tr>
-		<th>Name</th>
-		<th>Change</th>
+		<th>Ad</th>
+		<th>Əməliyyatlar</th>
 	</tr>
 	@foreach (var item in Model)
 	{
@@ -18,11 +18,11 @@
 			<tr>
 				<td>@item.Name</td>
 				<td>
-					<a href="/Admin/Home/DeleteCategory/@item.Id" class="btn btn-danger">Delete</a>
-					<a href="/Admin/Home/GetCategory/@item.Id" class="btn btn-success">Update</a>
+					<a href="/Admin/Home/DeleteCategory/@item.Id" class="btn btn-danger">Sil</a>
+					<a href="/Admin/Home/GetCategory/@item.Id" class="btn btn-success">Güncəllə</a>
 				</td>
 			</tr>
 		}
 	}
 </table>
-<a href="/Admin/Home/NewCategory/" class="btn btn-primary">New Category</a>
+<a href="/Admin/Home/NewCategory/" class="btn btn-primary">Yeni kateqorya əlavə et</a>

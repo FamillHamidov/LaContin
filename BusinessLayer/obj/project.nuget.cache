@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "cegWyttst8oc6ANKR1xYZH5XCw4JGfD4D0B0Z+IoceT+p1TWv74Iu8Fnhy7spnJhDFrJZ4ggTqfIx0Eq3ehTeg==",
+  "dgSpecHash": "jpfDr0E9KzMMmq7YhFFslk9/kILjWxeHs/Ah7Y8cSvrPNcnqHf3eDDnbZahzYpHrKO42XvVKHxAzfcCA4lwdqQ==",
   "success": true,
   "projectFilePath": "D:\\Project\\LaContin_Project\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete;
 using EntityLayer.Entities;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Areas.Admin.Controllers
@@ -11,13 +13,13 @@ namespace PresentationLayer.Areas.Admin.Controllers
 		private readonly ICategoryService _categoryService;
 		private readonly Context _context;
 
-        public HomeController(ICategoryService categoryService, Context context)
-        {
-            _categoryService = categoryService;
-            _context = context;
-        }
+		public HomeController(ICategoryService categoryService, Context context)
+		{
+			_categoryService = categoryService;
+			_context = context;
+		}
 
-        public IActionResult Index()
+		public IActionResult Index()
 		{
 			var categories = _categoryService.GetAll();
 			return View(categories);
@@ -28,13 +30,26 @@ namespace PresentationLayer.Areas.Admin.Controllers
 			return View();
 		}
 		[HttpPost]
-		public IActionResult NewCategory(Category category) 
+		public IActionResult NewCategory(Category category)
 		{
-			_categoryService.Add(category);
-			_context.SaveChanges();
-			return RedirectToAction("Index");
+			CategoryValidator validations = new CategoryValidator();
+			ValidationResult result = validations.Validate(category);
+			if (result.IsValid)
+			{
+				_categoryService.Add(category);
+				_context.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			else
+			{
+				foreach (var error in result.Errors)
+				{
+					ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+				}
+			}
+			return View();
 		}
-		public IActionResult DeleteCategory(int id) 
+		public IActionResult DeleteCategory(int id)
 		{
 			var category = _categoryService.GetById(id);
 			category.Status = false;

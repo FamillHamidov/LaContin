@@ -4,13 +4,13 @@
 	Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1 style="margin-top:10px">Category Update</h1>
+<h1 style="margin-top:10px">Kateqoriyanı Güncəllə</h1>
 <form asp-action="UpdateCategory" method="post">
 	<input asp-for="Id" type="hidden" />
-	<label asp-for="Name"></label>
+	<label>Ad</label>
 	<input asp-for="Name" type="text" class="form-control" />
 	<div class="form-group" style="margin-top:10px">
-		<button class="btn btn-primary">Update</button>
+		<button class="btn btn-primary">Güncəllə</button>
 	</div>
 </form>
 
