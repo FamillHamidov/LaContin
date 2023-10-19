@@ -13,7 +13,6 @@ namespace BusinessLayer.ValidationRules
         public CategoryValidator()
         {
             RuleFor(x => x.Name).NotEmpty().WithMessage("Ad sahəsi tələb olunur");
-            RuleFor(x => x.Name).NotNull().OverridePropertyName(x => x.Name).WithMessage("Test");
         }
     }
 }

@@ -32,13 +32,30 @@ namespace PresentationLayer.Areas.Admin.Controllers
 		[HttpPost]
 		public IActionResult NewCategory(Category category)
 		{
+			var exist = true;
+			var categories = _categoryService.GetAll();
 			CategoryValidator validations = new CategoryValidator();
 			ValidationResult result = validations.Validate(category);
 			if (result.IsValid)
 			{
-				_categoryService.Add(category);
-				_context.SaveChanges();
-				return RedirectToAction("Index");
+				foreach (var item in categories.Where(x => x.Status == true))
+				{
+
+					if (category.Name.ToUpper() == item.Name.ToUpper())
+					{
+						exist = false;
+					}
+				}
+				if (exist == false)
+				{
+					ModelState.AddModelError("", "Daxil etdiyiniz ad artıq mövcuddur");
+				}
+				else
+				{
+					_categoryService.Add(category);
+					_context.SaveChanges();
+					return RedirectToAction("Index");
+				}
 			}
 			else
 			{
@@ -65,9 +82,45 @@ namespace PresentationLayer.Areas.Admin.Controllers
 		[HttpPost]
 		public IActionResult UpdateCategory(Category category)
 		{
+
 			_categoryService.Update(category);
 			_context.SaveChanges();
 			return RedirectToAction("Index");
 		}
+		//public bool CheckName(string name)
+		//{
+		//	var exist = true;
+		//	var categories = _categoryService.GetAll();
+		//	Category category = new Category();
+		//	CategoryValidator validations = new CategoryValidator();
+		//	ValidationResult result = validations.Validate(category);
+		//	if (result.IsValid)
+		//	{
+		//		foreach (var item in categories.Where(x => x.Status == true))
+		//		{
+
+		//			if (category.Name.ToUpper() == item.Name.ToUpper())
+		//			{
+		//				exist = false;
+		//			}
+		//		}
+		//		if (exist == false)
+		//		{
+		//			ModelState.AddModelError("", "Daxil etdiyiniz ad artıq mövcuddur");
+		//		}
+		//		else
+		//		{
+		//			return true;
+		//		}
+		//	}
+		//	else
+		//	{
+		//		foreach (var error in result.Errors)
+		//		{
+		//			ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+		//		}
+		//	}
+		//	return exist;
+		//}
 	}
 }
