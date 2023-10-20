@@ -1517,12 +1517,20 @@
       "PackagePath": "staticwebassets\\product\\Image\\2e04d299-1193-480f-9fd8-b29357efa142.jpg"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\6828bdc7-516f-44d0-9e1c-5fa439a7761c_cadir.jpg",
+      "PackagePath": "staticwebassets\\product\\Image\\6828bdc7-516f-44d0-9e1c-5fa439a7761c_cadir.jpg"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\6d993c94-2f94-46b2-a865-0a460d7b893e.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\6d993c94-2f94-46b2-a865-0a460d7b893e.jpg"
     },
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\801057d0-49e5-475b-ad9f-c646f2cf1034.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\801057d0-49e5-475b-ad9f-c646f2cf1034.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\874bde99-7cc9-4a79-97c7-3862aa4096c6_camp-pc.jpg",
+      "PackagePath": "staticwebassets\\product\\Image\\874bde99-7cc9-4a79-97c7-3862aa4096c6_camp-pc.jpg"
     },
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\876279f2-0536-4b7d-8de7-5fef0b2781fd.jpg",
@@ -1565,6 +1573,10 @@
       "PackagePath": "staticwebassets\\product\\Image\\d3acacc6-a934-452f-a83f-ff5fa9c7897e_IMG_3106.jpg"
     },
     {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\d90aa944-5447-4b49-9e75-5f39b653a110_Design-Pattern.png",
+      "PackagePath": "staticwebassets\\product\\Image\\d90aa944-5447-4b49-9e75-5f39b653a110_Design-Pattern.png"
+    },
+    {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\dcb8deb4-f7d7-4775-92d8-b239efdf1bef.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\dcb8deb4-f7d7-4775-92d8-b239efdf1bef.jpg"
     },
@@ -1587,6 +1599,10 @@
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\edbfe328-4a8d-449c-8263-64e770f4b1c3.jpg",
       "PackagePath": "staticwebassets\\product\\Image\\edbfe328-4a8d-449c-8263-64e770f4b1c3.jpg"
+    },
+    {
+      "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\product\\Image\\f31be385-fa8a-4248-9bcc-fec4fbfb0f1d_cadir.jpg",
+      "PackagePath": "staticwebassets\\product\\Image\\f31be385-fa8a-4248-9bcc-fec4fbfb0f1d_cadir.jpg"
     },
     {
       "Id": "D:\\Project\\LaContin_Project\\PresentationLayer\\wwwroot\\title\\Image\\08095f1d-aeaf-4908-9d13-5a8de0a663c6_slide_2.jpg",

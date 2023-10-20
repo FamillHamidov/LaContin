@@ -82,10 +82,40 @@ namespace PresentationLayer.Areas.Admin.Controllers
 		[HttpPost]
 		public IActionResult UpdateCategory(Category category)
 		{
+			var exist = true;
+			var categories = _categoryService.GetAll();
+			CategoryValidator validations = new CategoryValidator();
+			ValidationResult result = validations.Validate(category);
+			if (result.IsValid)
+			{
+				foreach (var item in categories.Where(x => x.Status == true))
+				{
 
-			_categoryService.Update(category);
-			_context.SaveChanges();
-			return RedirectToAction("Index");
+					if (category.Name.ToUpper() == item.Name.ToUpper())
+					{
+						exist = false;
+					}
+				}
+				if (exist == false)
+				{
+					ModelState.AddModelError("", "Daxil etdiyiniz ad artıq mövcuddur");
+				}
+				else
+				{
+					_categoryService.Update(category);
+					_context.SaveChanges();
+					return RedirectToAction("Index");
+				}
+			}
+			else
+			{
+				foreach (var error in result.Errors)
+				{
+					ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+				}
+			}
+			return View();
+			
 		}
 		//public bool CheckName(string name)
 		//{

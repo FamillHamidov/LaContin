@@ -8,12 +8,12 @@
 <h1 style="margin-top:10px">Products</h1>
 <table class="table table-bordered">
 	<tr>
-		<th>Name</th>
-		<th>Category Name</th>
-		<th>Old Price</th>
-		<th>New Price</th>
-		<th>Picture</th>
-		<th>Change</th>
+		<th>Məhsul</th>
+		<th>Kateqoriyası</th>
+		<th>Köhnə qiyməti</th>
+		<th>Yeni qiyməti</th>
+		<th>Şəkil</th>
+		<th>Əməliyyatlar</th>
 	</tr>
 	@foreach (var item in Model)
 	{
@@ -26,10 +26,10 @@
 				<img src="@item.PictureUrl" style="height:100px; width:100px"/>
 			</td>
 			<td>
-				<a href="/Admin/Product/DeleteProduct/@item.Id" class="btn btn-danger">Delete</a>
-				<a href="/Admin/Product/GetProduct/@item.Id" class="btn btn-success">Update</a>
+				<a href="/Admin/Product/DeleteProduct/@item.Id" class="btn btn-danger">Sil</a>
+				<a href="/Admin/Product/GetProduct/@item.Id" class="btn btn-success">Güncəllə</a>
 			</td>
 		</tr>
 	}
 </table>
-<a href="/Admin/Product/NewProduct" class="btn btn-primary">New Product</a>
+<a href="/Admin/Product/NewProduct" class="btn btn-primary">Yeni məhsul əlavə et</a>

@@ -4,43 +4,43 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1 style="margin-top:10px">GetProduct</h1>
+<h1 style="margin-top:10px">Məhsulu güncəllə</h1>
 <form method="post" asp-action="UpdateProduct" enctype="multipart/form-data">
     <input asp-for="Id" type="hidden"/>
     <input asp-for="PictureUrl" type="hidden"/>
     <div class="form-group">
-        <label asp-for="Name"></label>
+        <label>Ad</label>
         <input asp-for="Name" type="text" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="CategoryDto"></label>
+        <label>Kateqoriya</label>
         @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.categories, new { @class = "form-control" })
     </div>
     <div class="form-group">
-        <label asp-for="OldPrice"></label>
+        <label>Köhnə qiyməti</label>
         <input asp-for="OldPrice" type="text" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="NewPrice"></label>
+        <label>Yeni qiyməti</label>
         <input asp-for="NewPrice" type="text" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Description"></label>
+        <label>Əlavə məlumat</label>
         <input asp-for="Description" type="text" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Picture"></label>
+        <label>Şəkil 1</label>
         <input asp-for="Picture" type="file" class="form-control" />
     </div>
      <div class="form-group">
-        <label asp-for="Picture1"></label>
+        <label>Şəkil 2</label>
         <input asp-for="Picture1" type="file" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Picture2"></label>
+        <label>Şəkil 3</label>
         <input asp-for="Picture2" type="file" class="form-control" />
     </div>
     <div class="form-group">
-        <button class="btn btn-primary">Update Product</button>
+        <button class="btn btn-primary">Güncəllə</button>
     </div>
 </form>

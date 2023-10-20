@@ -1,45 +1,49 @@
 ﻿@model EntityLayer.Dtos.ProductDto
 @{
-    ViewData["Title"] = "NewProduct";
-    Layout = "~/Views/Shared/AdminLayout.cshtml";
+	ViewData["Title"] = "NewProduct";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1 style="margin-top:10px">NewProduct</h1>
+<h1 style="margin-top:10px">Yeni məhsul</h1>
 <form method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" type="text" class="form-control"/>
-    </div>
-    <div class="form-group">
-        <label asp-for="CategoryId"></label>
-        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.categories, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        <label asp-for="OldPrice"></label>
-        <input asp-for="OldPrice" type="text" class="form-control"/>
-    </div>
-    <div class="form-group">
-        <label asp-for="NewPrice"></label>
-        <input asp-for="NewPrice" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <input asp-for="Description" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Picture"></label>
-        <input asp-for="Picture" type="file" class="form-control" required/>
-    </div>
-     <div class="form-group">
-        <label asp-for="Picture1"></label>
-        <input asp-for="Picture1" type="file" class="form-control" required/>
-    </div>
-    <div class="form-group">
-        <label asp-for="Picture2"></label>
-        <input asp-for="Picture2" type="file" class="form-control" required />
-    </div>
-    <div class="form-group">
-    <button class="btn btn-primary">Add New Product</button>
-    </div>
+	<div class="form-group">
+		<label>Məhsulun adı</label>
+		<input asp-for="Name" type="text" class="form-control" />
+		<span asp-validation-for="Name" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label>Məhsulun kateqoriyası</label>
+		@Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.categories, new { @class = "form-control"})
+			<span asp-validation-for="CategoryId" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label>Məhsulun köhnə qiyməti</label>
+		<input asp-for="OldPrice" type="text" class="form-control" />
+	</div>
+	<div class="form-group">
+		<label>Məhsulun yeni qiyməti</label>
+		<input asp-for="NewPrice" type="text" class="form-control" />
+		<span asp-validation-for="NewPrice" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label>Məhsul haqqında əlavə məlumat</label>
+		<input asp-for="Description" type="text" class="form-control" />
+		<span asp-validation-for="Description" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label>Şəkil 1</label>
+		<input asp-for="Picture" type="file" class="form-control" required />
+	</div>
+	<div class="form-group">
+		<label>Şəkil 2</label>
+		<input asp-for="Picture1" type="file" class="form-control" />
+	</div>
+	<div class="form-group">
+		<label>Şəkil 3</label>
+		<input asp-for="Picture2" type="file" class="form-control" />
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary">Əlavə et</button>
+	</div>
 </form>
 
