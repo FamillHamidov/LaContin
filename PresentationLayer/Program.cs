@@ -3,6 +3,9 @@ using BusinessLayer.Concrete;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +29,23 @@ builder.Services.AddScoped<ITestimonialDal, EfTestimonialService>();
 builder.Services.AddScoped<IContactService, ContactManager>();
 builder.Services.AddScoped<IContactDal, EfContactService>();
 builder.Services.AddAutoMapper(typeof(Program));
+//builder.Services.AddMvc(config =>
+//{
+//	var policy = new AuthorizationPolicyBuilder()
+//	.RequireAuthenticatedUser()
+//	.Build();
+//	config.Filters.Add(new AuthorizeFilter(policy));
+//});
+//builder.Services.ConfigureApplicationCookie(options =>
+//{
+//	options.Cookie.HttpOnly = true;
+//	options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+//	options.LoginPath = "/Admin/Login/Index/";
+//});
+//builder.Services.AddAuthentication(options =>
+//{
+//	options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//});
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -37,7 +57,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+//app.UseAuthentication();
 app.UseRouting();
 
 app.UseAuthorization();

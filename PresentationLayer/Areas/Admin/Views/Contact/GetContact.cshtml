@@ -7,23 +7,26 @@
 <form method="post" asp-action="UpdateContact">
 	<input type="hidden" asp-for="Id"/>
 	<div class="form-group"  style="margin-top:10px">
-		<label asp-for="Title"></label>
+		<label>Başlıq</label>
 		<input asp-for="Title" type="text" class="form-control" />
+		<span asp-validation-for="Title" class="text-danger"></span>
 	</div>
 	<div class="form-group" style="margin-top:10px">
-		<label asp-for="FirstSocialMedia"></label>
+		<label>Sosial Media 1</label>
 		<input asp-for="FirstSocialMedia" type="text" class="form-control" />
+		<span asp-validation-for="FirstSocialMedia" class="text-danger"></span>
 	</div>
 	<div class="form-group" style="margin-top:10px">
-		<label asp-for="FirstUrlOrNumber"></label>
+		<label>Link 1</label>
 		<input asp-for="FirstUrlOrNumber" type="text" class="form-control" />
+		<span asp-validation-for="FirstUrlOrNumber" class="text-danger"></span>
 	</div>
 	<div class="form-group" style="margin-top:10px">
-		<label asp-for="SecondSocialMedia"></label>
+		<label>Sosial Media 2</label>
 		<input asp-for="SecondSocialMedia" type="text" class="form-control" />
 	</div>
 	<div class="form-group" style="margin-top:10px">
-		<label asp-for="SecondUrlOrNumber"></label>
+		<label>Link 2</label>
 		<input asp-for="SecondUrlOrNumber" type="text" class="form-control" />
 	</div>
 	<div class="form-group" style="margin-top:10px">

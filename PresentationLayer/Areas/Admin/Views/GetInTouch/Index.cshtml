@@ -5,13 +5,13 @@
 	Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1 style="margin-top:10px">Index</h1>
+<h1 style="margin-top:10px">Əlaqə</h1>
 <table class="table table-bordered">
 	<tr>
-		<th>Email</th>
-		<th>Phone</th>
-		<th>Address</th>
-		<th>Change</th>
+		<th>Mail</th>
+		<th>Nömrə</th>
+		<th>Adres</th>
+		<th>Əməliyyatlar</th>
 	</tr>
 	@foreach (var item in Model)
 	{
@@ -21,10 +21,9 @@
 			<td>@item.Phone</td>
 			<td>@item.Address</td>
 			<td>
-				<a href="/Admin/GetInTouch/DeleteGetInTouch/@item.Id" class="btn btn-danger">Delete</a>
-				<a href="/Admin/GetInTouch/GetGetInTouch/@item.Id" class="btn btn-success">Update</a>
+				<a href="/Admin/GetInTouch/DeleteGetInTouch/@item.Id" class="btn btn-danger">Sil</a>
+				<a href="/Admin/GetInTouch/GetGetInTouch/@item.Id" class="btn btn-success">Güncəllə</a>
 			</td>
 		</tr>
 	}
 </table>
-<a href="/Admin/GetInTouch/NewGetInTouch/" class="btn btn-primary">New GetInTouch</a>

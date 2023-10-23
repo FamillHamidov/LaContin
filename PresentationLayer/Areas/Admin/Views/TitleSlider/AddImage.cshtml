@@ -4,14 +4,15 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1>AddImage</h1>
+<h1>Yeni Şəkil</h1>
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label asp-for="Picture"></label>
-        <input asp-for="Picture" type="file" class="form-control" required />
+        <label>Şəkil</label>
+        <input asp-for="Picture" type="file" class="form-control" required
+        oninvalid="setCustomValidity('Şəkil sahəsi tələb olunur')" oninput="setCustomValidity('')"/>
     </div>
     <div class="form-group">
-        <button class="btn btn-primary">Add New Product</button>
+        <button class="btn btn-primary">Əlavə et</button>
     </div>
 </form>
 

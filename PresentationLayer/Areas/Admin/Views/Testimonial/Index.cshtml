@@ -4,13 +4,13 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
-<h1 style="margin-top:10px">Index</h1>
+<h1 style="margin-top:10px">Müştərilər</h1>
 <table class="table table-bordered">
 	<tr>
-		<th>Name</th>
-		<th>Title</th>
-		<th>Description</th>
-		<th>Change</th>
+		<th>Ad soyad</th>
+		<th>Başlıq</th>
+		<th>Açıqlama</th>
+		<th>Əməliyyatlar</th>
 	</tr>
 	@foreach (var item in Model)
 	{
@@ -20,11 +20,11 @@
 			<td>@item.Title</td>
 			<td>@item.Description</td>
 			<td>
-				<a href="/Admin/Testimonial/RemoveTestimonial/@item.Id" class="btn btn-danger">Delete</a>
-				<a href="/Admin/Testimonial/GetTestimonial/@item.Id" class="btn btn-success">Update</a>
+				<a href="/Admin/Testimonial/RemoveTestimonial/@item.Id" class="btn btn-danger">Sil</a>
+				<a href="/Admin/Testimonial/GetTestimonial/@item.Id" class="btn btn-success">Güncəllə</a>
 			</td>
 		</tr>
 	}
 </table>
-<a href="/Admin/Testimonial/AddTestimonial/" class="btn btn-primary">New Testimonial</a>
+<a href="/Admin/Testimonial/AddTestimonial/" class="btn btn-primary">Yeni müştəri əlavə et</a>
 

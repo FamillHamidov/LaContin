@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete;
 using EntityLayer.Entities;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Areas.Admin.Controllers
@@ -30,9 +32,22 @@ namespace PresentationLayer.Areas.Admin.Controllers
 		[HttpPost]
 		public IActionResult AddContact(Contact contact)
 		{
-			_contactService.Add(contact);
-			_context.SaveChanges();
-			return RedirectToAction("Index");
+			ContactValidator validations = new ContactValidator();
+			ValidationResult result = validations.Validate(contact);
+			if (result.IsValid)
+			{
+				_contactService.Add(contact);
+				_context.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			else
+			{
+				foreach (var item in result.Errors)
+				{
+					ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+				}
+			}
+			return View();
 		}
 		public IActionResult DeleteContact(int id)
 		{
@@ -43,14 +58,27 @@ namespace PresentationLayer.Areas.Admin.Controllers
 		}
 		public IActionResult GetContact(int id)
 		{
-			var contact=_contactService.GetById(id);
+			var contact = _contactService.GetById(id);
 			return View(contact);
 		}
 		public IActionResult UpdateContact(Contact contact)
 		{
-			_contactService.Update(contact);
-			_context.SaveChanges();
-			return RedirectToAction("Index");
+			ContactValidator validations = new ContactValidator();
+			ValidationResult result = validations.Validate(contact);
+			if (result.IsValid)
+			{
+				_contactService.Update(contact);
+				_context.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			else
+			{
+				foreach (var item in result.Errors)
+				{
+					ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+				}
+			}
+			return View();
 		}
 	}
 }

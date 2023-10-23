@@ -4,24 +4,23 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
-
-<h1>Index</h1>
+<h1 style="margin-top:10px">Şəkillər</h1>
 <table class="table table-bordered">
     <tr>
-        <th>Id</th>
-        <th>Images</th>
+        <th>Şəkil</th>
         <th>Delete</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.Id</td>
-            <td>@item.ImageUrl</td>
             <td>
-                <a href="/Admin/TitleSlider/RemoveImage/@item.Id" class="btn btn-danger">Delete</a>
+                <img src="@item.ImageUrl" style="height:100px; width:100px" />
+            </td>
+            <td>
+                <a href="/Admin/TitleSlider/RemoveImage/@item.Id" class="btn btn-danger">Sil</a>
             </td>
         </tr>
     }
 </table>
-<a href="/Admin/TitleSlider/AddImage/" class="btn btn-success">Add new Image</a>
+<a href="/Admin/TitleSlider/AddImage/" class="btn btn-success">Yeni şəkil əlavə et</a>
 

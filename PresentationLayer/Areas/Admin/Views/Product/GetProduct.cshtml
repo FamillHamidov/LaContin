@@ -1,46 +1,54 @@
 ﻿@model EntityLayer.Dtos.ProductDto
 @{
-    ViewData["Title"] = "GetProduct";
-    Layout = "~/Views/Shared/AdminLayout.cshtml";
+	ViewData["Title"] = "GetProduct";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
 <h1 style="margin-top:10px">Məhsulu güncəllə</h1>
 <form method="post" asp-action="UpdateProduct" enctype="multipart/form-data">
-    <input asp-for="Id" type="hidden"/>
-    <input asp-for="PictureUrl" type="hidden"/>
-    <div class="form-group">
-        <label>Ad</label>
-        <input asp-for="Name" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Kateqoriya</label>
-        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.categories, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        <label>Köhnə qiyməti</label>
-        <input asp-for="OldPrice" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Yeni qiyməti</label>
-        <input asp-for="NewPrice" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Əlavə məlumat</label>
-        <input asp-for="Description" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Şəkil 1</label>
-        <input asp-for="Picture" type="file" class="form-control" />
-    </div>
-     <div class="form-group">
-        <label>Şəkil 2</label>
-        <input asp-for="Picture1" type="file" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>Şəkil 3</label>
-        <input asp-for="Picture2" type="file" class="form-control" />
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary">Güncəllə</button>
-    </div>
+	<input asp-for="Id" type="hidden" />
+	<input asp-for="PictureUrl" type="hidden" />
+	<div class="form-group">
+		<label>Ad</label>
+		<input asp-for="Name" type="text" class="form-control" required oninvalid="setCustomValidity('Ad sahəsi tələb olunur')"
+	  oninput="setCustomValidity('')" />
+	</div>
+	<div class="form-group">
+		<label>Kateqoriya</label>
+		<select asp-for="CategoryId" asp-items="@ViewBag.categories" class="form-control"
+				required oninvalid="setCustomValidity('Kateqoriya sahəsi tələb olunur')" oninput="setCustomValidity('')">
+			<option selected disabled value="">Kateqoriyanı seçin</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label>Köhnə qiyməti</label>
+		<input asp-for="OldPrice" type="text" class="form-control" />
+	</div>
+	<div class="form-group">
+		<label>Yeni qiyməti</label>
+		<input asp-for="NewPrice" type="text" class="form-control" required
+	  oninvalid="setCustomValidity('Yeni qiymət sahəsi tələb olunur')" oninput="setCustomValidity('')" />
+	</div>
+	<div class="form-group">
+		<label>Əlavə məlumat</label>
+		<input asp-for="Description" type="text" class="form-control" />
+	</div>
+	<div class="form-group">
+		<label>Şəkil 1</label>
+		<input asp-for="Picture" type="file" class="form-control" required
+	  oninvalid="setCustomValidity('Şəkil 1 sahəsi tələb olunur')" oninput="setCustomValidity('')" />
+	</div>
+	<div class="form-group">
+		<label>Şəkil 2</label>
+		<input asp-for="Picture1" type="file" class="form-control" required
+	  oninvalid="setCustomValidity('Şəkil 2 sahəsi tələb olunur')" oninput="setCustomValidity('')" />
+	</div>
+	<div class="form-group">
+		<label>Şəkil 3</label>
+		<input asp-for="Picture2" type="file" class="form-control" required
+	  oninvalid="setCustomValidity('Şəkil 3 sahəsi tələb olunur')" oninput="setCustomValidity('')" />
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary">Güncəllə</button>
+	</div>
 </form>

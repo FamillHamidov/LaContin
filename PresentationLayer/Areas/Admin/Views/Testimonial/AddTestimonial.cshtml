@@ -3,22 +3,25 @@
     ViewData["Title"] = "AddTestimonial";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
-<h1 style="margin-top:10px">New Testimonial</h1>
+<h1 style="margin-top:10px">Yeni müştəri</h1>
 <form method="post">
 	<div class="form-group" style="margin-top:10px">
-		<label asp-for="Name"></label>
+		<label>Ad soyad</label>
 		<input asp-for="Name" type="text" class="form-control" />
+		<span asp-validation-for="Name" class="text-danger"></span>
 	</div>
 	<div class="form-group" style="margin-top:10px">
-		<label asp-for="Title"></label>
+		<label>Başlıq</label>
 		<input asp-for="Title" type="text" class="form-control" />
+		<span asp-validation-for="Title" class="text-danger"></span>
 	</div>
 	<div class="form-group" style="margin-top:10px">
-		<label asp-for="Description"></label>
+		<label>Açıqlama</label>
 		<input asp-for="Description" type="text" class="form-control" />
+		<span asp-validation-for="Description" class="text-danger"></span>
 	</div>
 	<div class="form-group" style="margin-top:10px">
-		<button class="btn btn-success">Add</button>
+		<button class="btn btn-success">Əlavə et</button>
 	</div>
 </form>
 

@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Abstract;
 using EntityLayer.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         private readonly IAdminService _adminService;
@@ -29,7 +31,7 @@ namespace PresentationLayer.Areas.Admin.Controllers
             }
             else
             {
-                ModelState.AddModelError("", "Istifadeci adi ve ya sifre sehvdir");
+                ModelState.AddModelError("", "İstifadəçi adı və ya şifrə yanlışdır");
             }
             return View();
         }

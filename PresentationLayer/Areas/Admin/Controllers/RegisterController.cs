@@ -1,11 +1,13 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using EntityLayer.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+	[AllowAnonymous]
 	public class RegisterController : Controller
 	{
 		private readonly IAdminService _adminService;

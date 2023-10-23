@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete;
 using EntityLayer.Entities;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PresentationLayer.Areas.Admin.Controllers
@@ -30,9 +32,22 @@ namespace PresentationLayer.Areas.Admin.Controllers
 		[HttpPost]
 		public IActionResult AddTestimonial(Testimonial testimonial)
 		{
-			_testimonialService.Add(testimonial);
-			_context.SaveChanges();
-			return RedirectToAction("Index");
+			TestimonialValidator validations = new TestimonialValidator();
+			ValidationResult result = validations.Validate(testimonial);
+			if (result.IsValid)
+			{
+				_testimonialService.Add(testimonial);
+				_context.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			else
+			{
+				foreach (var item in result.Errors)
+				{
+					ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+				}
+			}
+			return View();
 		}
 		public IActionResult RemoveTestimonial(int id)
 		{
@@ -48,9 +63,22 @@ namespace PresentationLayer.Areas.Admin.Controllers
 		}
 		public IActionResult UpdateTestimonial(Testimonial testimonial)
 		{
-			_testimonialService.Update(testimonial);
-			_context.SaveChanges();
-			return RedirectToAction("Index");
+			TestimonialValidator validations = new TestimonialValidator();
+			ValidationResult result = validations.Validate(testimonial);
+			if (result.IsValid)
+			{
+				_testimonialService.Update(testimonial);
+				_context.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			else
+			{
+				foreach (var item in result.Errors)
+				{
+					ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+				}
+			}
+			return View();
 		}
 	}
 }
