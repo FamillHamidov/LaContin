@@ -1,7 +1,9 @@
 ﻿using BusinessLayer.Abstract;
 using EntityLayer.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using PresentationLayer.Areas.Admin.Models;
 
 namespace PresentationLayer.Areas.Admin.Controllers
 {
@@ -9,11 +11,10 @@ namespace PresentationLayer.Areas.Admin.Controllers
     [AllowAnonymous]
     public class LoginController : Controller
     {
-        private readonly IAdminService _adminService;
-
-        public LoginController(IAdminService adminService)
+        private readonly SignInManager<AdminUser> _signInManager;
+        public LoginController(IAdminService adminService, SignInManager<AdminUser> signInManager)
         {
-            _adminService = adminService;
+            _signInManager = signInManager;
         }
         [HttpGet]
         public IActionResult Index()
@@ -21,19 +22,19 @@ namespace PresentationLayer.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Index(Login login)
+        public async Task<IActionResult> Index(AdminLoginViewModel model)
         {
-            var admin = _adminService.GetAll();
-            var result = admin.FirstOrDefault(x => x.Username == login.Username && x.Password == login.Password);
-            if (result != null)
+            var admin = await _signInManager.PasswordSignInAsync(model.Username, model.Password, true, true);
+            if (admin.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home", new { area = "Admin" });
             }
             else
             {
-                ModelState.AddModelError("", "İstifadəçi adı və ya şifrə yanlışdır");
+                ModelState.AddModelError("", "İstifadəçi adı və ya şifrə yanlışdır!");
             }
             return View();
+
         }
     }
 }

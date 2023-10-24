@@ -3,6 +3,7 @@ using BusinessLayer.Concrete;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Entities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -28,20 +29,21 @@ builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 builder.Services.AddScoped<ITestimonialDal, EfTestimonialService>();
 builder.Services.AddScoped<IContactService, ContactManager>();
 builder.Services.AddScoped<IContactDal, EfContactService>();
+builder.Services.AddIdentity<AdminUser, AdminRole>().AddEntityFrameworkStores<Context>();
 builder.Services.AddAutoMapper(typeof(Program));
-//builder.Services.AddMvc(config =>
-//{
-//	var policy = new AuthorizationPolicyBuilder()
-//	.RequireAuthenticatedUser()
-//	.Build();
-//	config.Filters.Add(new AuthorizeFilter(policy));
-//});
-//builder.Services.ConfigureApplicationCookie(options =>
-//{
-//	options.Cookie.HttpOnly = true;
-//	options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
-//	options.LoginPath = "/Admin/Login/Index/";
-//});
+builder.Services.AddMvc(config =>
+{
+	var policy = new AuthorizationPolicyBuilder()
+	.RequireAuthenticatedUser()
+	.Build();
+	config.Filters.Add(new AuthorizeFilter(policy));
+});
+builder.Services.ConfigureApplicationCookie(options =>
+{
+	options.Cookie.HttpOnly = true;
+	options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+	options.LoginPath = "/Admin/Login/Index/";
+});
 //builder.Services.AddAuthentication(options =>
 //{
 //	options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -57,7 +59,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-//app.UseAuthentication();
+app.UseAuthentication();
 app.UseRouting();
 
 app.UseAuthorization();

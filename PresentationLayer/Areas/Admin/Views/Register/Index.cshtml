@@ -1,4 +1,4 @@
-﻿@model EntityLayer.Entities.Login
+﻿@model PresentationLayer.Areas.Admin.Models.AdminRegisterViewModel
 @{
     Layout = null;
 }
@@ -65,10 +65,11 @@
                                     <div class="login-form-container">
                                         <div class="login-register-form">
                                             <form action="Index" method="post">
+                                                <div asp-validation-summary="All" class="text-danger"></div>
                                                 <input type="text" asp-for="Name" placeholder="Ad" required>
                                                 <input type="text" asp-for="Surname" placeholder="Soyad" required>
                                                 <input type="text" asp-for="Username" placeholder="İstifadəçi adı" required>
-                                                <input type="email" asp-for="Email" placeholder="Mail" required>
+                                                <input type="email" asp-for="Mail" placeholder="Mail" required>
                                                 <input type="password" asp-for="Password" placeholder="Şifrə" required>
                                                 <div class="button-box btn-hover">
                                                     <button type="submit">Qeydiyyat</button>
