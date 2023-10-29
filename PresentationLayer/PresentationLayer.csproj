@@ -45,6 +45,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="wwwroot\about\Image\" />
+    <Folder Include="wwwroot\banner\Image\" />
     <Folder Include="wwwroot\logo\Image\" />
     <Folder Include="wwwroot\product\Image\" />
     <Folder Include="wwwroot\title\Image\" />

@@ -23,5 +23,6 @@ namespace DataAccessLayer.Concrete
        public DbSet<TitleSlider> TitleSliders{ get; set; }
        public DbSet<Logo> Logos{ get; set; }
        public DbSet<Contact> Contacts{ get; set; }
+       public DbSet<BannerPicture> BannerPictures{ get; set; }
     }
 }

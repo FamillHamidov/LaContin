@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Dtos.BannerPictureDto
+@{
+    ViewData["Title"] = "GetBanner";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1 style="margin-top:10px">Güncəlləmə səhifəsi</h1>
+<form method="post" asp-action="UpdateBanner" enctype="multipart/form-data">
+    <input asp-for="Id" type="hidden" />
+    <input asp-for="PictureUrl" type="hidden" />
+    <div class="form-group">
+        <label>Şəkil</label>
+        <input asp-for="Picture" type="file" class="form-control" 
+        required oninvalid="setCustomValidity('Şəkil sahəsi tələb olunur')" oninput="setCustomValidiy('')"/>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Güncəllə</button>
+    </div>
+</form>

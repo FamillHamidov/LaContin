@@ -150,6 +150,22 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("EntityLayer.Entities.BannerPicture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("PictureUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BannerPictures");
+                });
+
             modelBuilder.Entity("EntityLayer.Entities.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -294,6 +310,9 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<string>("PictureUrl2")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

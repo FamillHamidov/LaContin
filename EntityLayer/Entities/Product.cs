@@ -19,5 +19,6 @@ namespace EntityLayer.Entities
         public string? PictureUrl{ get; set; }
         public string? PictureUrl1{ get; set; }
         public string? PictureUrl2{ get; set; }
+        public int Stock { get; set; }
     }
 }
